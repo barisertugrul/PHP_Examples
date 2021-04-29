@@ -29,7 +29,7 @@
   
   
   <li class="dropdown">
-    <a href="javascript:void(0)" class="dropbtn"<?php if($sayfa == 'rehberlik') echo ' active' ?>>Rehberlik İşlemleri</a>
+    <a href="javascript:void(0)" class="dropbtn<?php if($sayfa == 'rehberlik') echo ' active' ?>">Rehberlik İşlemleri</a>
     <div class="dropdown-content">
       <a href="ogrenci_gorusme_listesi.php">Görüşme Listesi</a>
       <a href="#">Görüşme Ekleme</a>
