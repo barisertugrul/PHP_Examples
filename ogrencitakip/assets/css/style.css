@@ -108,7 +108,7 @@ div {
   padding: 20px;
 }
 
-a.btn.btn:link, a:visited {
+a.btn.btn:link, a.btn.btn:visited {
   background-color: white;
   padding: 10px 20px;
   text-align: center;
@@ -116,7 +116,7 @@ a.btn.btn:link, a:visited {
   display: inline-block;
 }
   
-a.btn:link, a:visited {
+a.btn:link, a.btn.btn:visited {
   color: green;
   border: 2px solid green;
 }
@@ -126,12 +126,12 @@ a.btn.btn-green:hover, a:active {
   color: white;
 }
 
-a.btn.btn-red:link, a:visited {
+a.btn.btn-red:link, a.btn.btn:visited {
   color: red;
   border: 2px solid red;
 }
 
-a.btn.btn-red:hover, a:active {
+a.btn.btn-red:hover, a.btn.btn:active {
   background-color: red;
   color: white;
 }
