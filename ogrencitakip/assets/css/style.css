@@ -137,5 +137,19 @@ a.btn.btn-red:hover, a.btn.btn:active {
 }
 
 div.arama{
-	max-width:200px;
+	max-width:300px;
+}
+
+.arama input[type=submit]{
+	width:45%;
+	margin-left:10px;
+}
+
+.arama input[type=text]{
+	width:50%;
+}
+
+.arama label{
+	min-width:100%;
+	display: inline-block;
 }

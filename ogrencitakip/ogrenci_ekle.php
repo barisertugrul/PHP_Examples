@@ -1,7 +1,6 @@
 <?php
 $sayfa="ogrenci";
 include('baslik.php');
-$ogrenciler = ogrenci_listesi_cek();
 if($_POST["kaydet"]){
 	ogrenci_ekle();
 }

@@ -149,6 +149,7 @@ function ogrenci_ekle(){
 			));
 
 			echo "<p>Bilgiler başarılı bir şekilde kaydedildi.</p>";
+			header("Refresh: 3; url=ogrenci_listesi.php");
 
 		} catch (PDOException $e) {
 			die($e->getMessage());
@@ -229,6 +230,51 @@ function ogrenci_gorusmelerini_cek($ogrNo = null){
 	}
 	return false;
 
+}
+
+function gorusme_ekle(){
+	global $baglanti;
+
+	if($_POST["ekle"]) {
+
+	//Kayıt işlemi
+		
+		
+		$ogrenci			= $_POST["OgrNo"];
+		$rehber_ogretmen	= $_POST["RehberOgretmen"];
+		$date				= strtotime($_POST['GelisTarihi']);
+		$gelis_tarihi		= date('Y-m-d',$date);
+		$sorun				= $_POST['Sorun'];
+		$cozum				= $_POST["Cozum"];
+    
+
+		if (empty($ogrenci) || empty($rehber_ogretmen) || empty($gelis_tarihi) || empty($sorun) || empty($cozum)) {
+			die("<p>Lütfen formu eksiksiz doldurun!</p>");
+		}
+
+
+		try {
+
+			baglan();
+		
+			$sql = $baglanti->prepare("insert into rehberlik set OgrNo=:ogrNo, RehberOgretmen=:rehber_ogretmen, GelisTarihi=:gelis_tarihi, Sorun=:sorun, Cozum=:cozum");
+			$ekle = $sql->execute(array(
+				"ogrNo"					=> $ogrenci,
+				"rehber_ogretmen"		=> $rehber_ogretmen,
+				"gelis_tarihi"			=> $gelis_tarihi,
+				"sorun"					=> $sorun,
+				"cozum"					=> $cozum
+			));
+
+			echo "<p>Bilgiler başarılı bir şekilde kaydedildi.</p>";
+			header("Refresh: 3; url=ogrenci_gorusme_listesi.php");
+
+		} catch (PDOException $e) {
+			die($e->getMessage());
+		}
+
+		$baglanti = null;
+	}
 }
 
 ?>

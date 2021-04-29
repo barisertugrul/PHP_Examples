@@ -19,7 +19,7 @@ $ogrenciler = ogrenci_listesi_cek();
   </tr>
   
   <?php
-  if($ogrenciler)
+  if($ogrenciler){
 	foreach( $ogrenciler as $ogrenci ){
 	?>
 		<tr>
@@ -37,6 +37,7 @@ $ogrenciler = ogrenci_listesi_cek();
 		</tr>
 	<?php
 		 }
+  }
 	?>
   
 </table>

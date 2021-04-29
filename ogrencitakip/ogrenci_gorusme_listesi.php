@@ -15,9 +15,7 @@ if($_POST["ara"]){
 <div class="arama">
   <form action="ogrenci_gorusme_listesi.php" method="post">
     <label for="ogrNo">Öğrenci Numarası</label>
-    <input type="text" id="ogrNo" name="ogrNo" placeholder="Öğrencinin numarasını giriniz..">
-
-    <input type="submit" name="ara" value="Ara">
+    <input type="text" id="ogrNo" name="ogrNo" placeholder="Öğrencinin numarasını giriniz.."><input type="submit" name="ara" value="Ara">
   </form>
 </div>
 
@@ -36,7 +34,7 @@ if($_POST["ara"]){
   </tr>
   
   <?php
-  if($gorusmeler)
+  if($gorusmeler){
 	foreach( $gorusmeler as $gorusme ){
 	?>
 		<tr>
@@ -51,6 +49,7 @@ if($_POST["ara"]){
 		</tr>
 	<?php
 		 }
+  }
 	?>
   
 </table>
