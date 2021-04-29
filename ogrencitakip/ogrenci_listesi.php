@@ -31,8 +31,8 @@ $ogrenciler = ogrenci_listesi_cek();
 			<td><?=date_format(date_create($ogrenci['DogumTarihi']), 'd.m.Y');?></td>
 			<td><?=$ogrenci['Sinifi'];?></td>
 			<td>
-				<a class="btn btn-green" href="ogrenci_guncelle.php?ogrNo=<?=$ogrenci['OgrNo'];?>" target="_blank">Güncelle</a>
-				<a class="btn btn-red" href="ogrenci_sil.php?ogrNo=<?=$ogrenci['OgrNo'];?>" target="_blank">Sil</a>
+				<a class="btn btn-green" href="ogrenci_guncelle.php?ogrNo=<?=$ogrenci['OgrNo'];?>" target="_self">Güncelle</a>
+				<a class="btn btn-red" href="ogrenci_sil.php?ogrNo=<?=$ogrenci['OgrNo'];?>" target="_self">Sil</a>
 			</td>
 		</tr>
 	<?php

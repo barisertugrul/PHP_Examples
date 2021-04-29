@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Anamakine: localhost
--- Üretim Zamanı: 29 Nis 2021, 08:05:54
+-- Üretim Zamanı: 29 Nis 2021, 09:51:44
 -- Sunucu sürümü: 8.0.18
 -- PHP Sürümü: 7.3.11
 
@@ -57,12 +57,12 @@ CREATE TABLE `kayit` (
 --
 
 INSERT INTO `kayit` (`OgrNo`, `Adi`, `Soyadi`, `DogumYeri`, `DogumTarihi`, `Sinifi`, `Foto`) VALUES
-(1, 'Ali', 'Veli', 'Kırklareli', '2000-01-01', '6A', 'Fototest.jpg'),
-(2, 'Ayşe', 'Meşe', 'Rize', '2002-03-20', '7A', 'Fototest.jpg'),
-(3, 'Davut', 'Palamut', 'Harput', '2014-05-20', '7A', 'unsplash-Jeremy Vessey.jpg'),
-(4, 'Gülşen', 'Palamut', 'Harput', '2007-05-20', '8A', 'unsplash-Valentin Salja.jpg'),
-(5, 'Hülya', 'Palamut', 'Harput', '2014-05-20', '5A', 'unsplash-Nathan Anderson.jpg'),
-(6, 'Bedirhan', 'Özkuzu', 'Niğde', '2021-03-20', '8A', '');
+(1, 'Ali', 'Veli', 'Kırklareli', '2000-01-01', '6A', '1673788.jpg'),
+(2, 'Ayşe', 'Meşe', 'Rize', '2002-03-20', '7A', '1689594.jpg'),
+(3, 'Davut', 'Palamut', 'Harput', '2014-05-20', '7A', '1885631.jpg'),
+(4, 'Gülşen', 'Palamut', 'Harput', '2007-05-20', '8A', '1878862.jpg'),
+(5, 'Hülya', 'Palamut', 'Harput', '2014-05-20', '5A', '1906379.jpg'),
+(6, 'Bedirhan', 'Özkuzu', 'Niğde', '2021-03-20', '8A', '1673784.jpg');
 
 -- --------------------------------------------------------
 
@@ -87,7 +87,8 @@ INSERT INTO `rehberlik` (`RehberlikId`, `OgrNo`, `GelisTarihi`, `RehberOgretmen`
 (1, 1, '2021-03-20', 'Rehber Efendi', 'Arkadaşlık ilişkileri', 'Drama çalışması'),
 (2, 1, '2021-03-27', 'Rehber Efendi', 'Ders Çalışma', 'Verimli ders çalışma ilkeleri bilgilendirmesi'),
 (3, 2, '2021-02-14', 'Rehber Hanım', 'Aile içi şiddet', 'Aile incelemesi'),
-(4, 3, '2021-04-27', 'Rehber Hanım', 'Ekonomik sıkıntılar', 'Sivil toplum örgütlerinden destek');
+(4, 3, '2021-04-27', 'Rehber Hanım', 'Ekonomik sıkıntılar', 'Sivil toplum örgütlerinden destek'),
+(5, 3, '2021-04-29', 'Abc Defg', 'Ders başarısızlığı', 'Verimli ders çalışma yöntemleri bilgilendirmesi');
 
 --
 -- Dökümü yapılmış tablolar için indeksler
@@ -131,7 +132,7 @@ ALTER TABLE `kayit`
 -- Tablo için AUTO_INCREMENT değeri `rehberlik`
 --
 ALTER TABLE `rehberlik`
-  MODIFY `RehberlikId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `RehberlikId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
